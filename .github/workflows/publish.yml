@@ -24,9 +24,10 @@ jobs:
             - name: restore and build
               run: |
                 dotnet restore
+                echo '-----------------------------'
                 dotnet build
-            
-
+                
             - name: build docker image
               run: docker build -t davidsvson/docker-intro-gh .
+
             
